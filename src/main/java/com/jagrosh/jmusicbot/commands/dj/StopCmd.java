@@ -40,7 +40,9 @@ public class StopCmd extends DJCommand
     {
         AudioHandler handler = (AudioHandler)event.getGuild().getAudioManager().getSendingHandler();
         handler.stopAndClear();
-        event.getGuild().getAudioManager().closeAudioConnection();
+        if(!bot.getConfig().getStay()){
+            event.getGuild().getAudioManager().closeAudioConnection();  
+        }
         event.reply(event.getClient().getSuccess()+" The player has stopped and the queue has been cleared.");
     }
 }
