@@ -118,6 +118,7 @@ public class JMusicBot
                         new RepeatCmd(bot),
                         new SkiptoCmd(bot),
                         new StopCmd(bot),
+                        new DisconnectCmd(bot),
                         new VolumeCmd(bot),
                         
                         new PrefixCmd(bot),
